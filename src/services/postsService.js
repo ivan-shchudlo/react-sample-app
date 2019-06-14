@@ -1,9 +1,8 @@
 import delay from '../helpers/delay';
-
+import data from 'json';
 export default {
     fetchPosts: function() {
-        return fetch("https://jsonplaceholder.typicode.com/posts")
-            .then(response => response.json())
+        return Promise.resolve(data)
             .then(result => delay(result, 2000));
     }
 };
